@@ -14,15 +14,16 @@ else
   disk = ARGV[0]
   disk_name = ARGV[1]
   image = ARGV[2]
-  puts 'Erasing disk...'
-
-  `diskutil eraseDisk ExFat #{disk_name} #{disk}`
-
-  puts 'Unmounting disk'
-
-  `diskutil unmountDisk #{disk}`
-
-  puts 'Imaging disk...'
-
-  `sudo dd if=#{image} of=#{disk}`
 end
+
+puts 'Erasing disk...'
+
+`diskutil eraseDisk ExFat #{disk_name} #{disk}`
+
+puts 'Unmounting disk'
+
+`diskutil unmountDisk #{disk}`
+
+puts 'Imaging disk...'
+
+`sudo dd if=#{image} of=#{disk}`
