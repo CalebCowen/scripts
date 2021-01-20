@@ -26,4 +26,4 @@ puts 'Unmounting disk'
 
 puts 'Imaging disk...'
 
-`sudo dd if=#{image} of=#{disk} bs=2m`
+`sudo dd if=#{image} of=#{disk} bs=4M`
