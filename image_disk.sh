@@ -6,4 +6,4 @@ disk_name=$3
 
 diskutil eraseDisk ExFat $disk_name $disk;
 diskutil unmountDisk $disk;
-sudo dd if=$image of=$disk bs=2m;
+sudo dd if=$image of=$disk bs=4M;
